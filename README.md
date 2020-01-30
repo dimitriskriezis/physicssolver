@@ -126,31 +126,13 @@ Schuck S., Aubusson P., Burden K., Brindley S. (2018) Current Trends in Technolo
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Appendix
+
+![picture](databasevariable.png)
+![picture](searchformula.png)
+![picture](databasetemp.png)
+![picture](Untitled.png)
+![picture](solver.png)
 
  
 
