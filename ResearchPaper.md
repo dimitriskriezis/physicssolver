@@ -64,17 +64,17 @@ When the program receives the statement of a problem it stores in the problem ta
 Once the statement of the problem is dealt with, the program moves on to solve the problem. It first queries the keyword table and the variable table and finds all the relevant data. Based on the request data the problem selects the relevant formulas.  For example, if the problem asks for the value of the force (F), the program will select all the formulas that contain Force as the request. The program then takes the first selected formula and processes it in the following way.<br>
 If the values of the variables in the equation are given, the program calculates the result and outputs the solution. However, if one or more of the values are not given the program performs the same process again, this time the requested variable being the one whose value is not given. Following the previous example, if the program selects the formula F=m*a to calculate the value of the force, ‘m’ being mass and ‘a’ being acceleration, and we are not given the value of  ‘a’,  the program will make ‘a’ the request and search the table for formulas from which it can calculate its value. If in the new formula a variable is still missing, the program will perform the same procedure until it finds a result. When the program finds a result, it will recursively calculate all the values leading up to the missing one.<br>
 We have modelled the data of the entities involved in the context of physics as a Directed Acyclic Graph. The following graph is indicative of an instance in this graph.<br>
- 
+ ![picture](diagram.png)
 In the case that the given formulas do not suffice to produce the result the program follows the following process. It searches for formulas that have the requested variable as a given and transforms them in order to produce a new formula from which it can calculate the requested result. A simple example is the following: Given the formula W=F*Δx (W=Work, F=Force, Δx=displacement) and the requested variable F(Force), the program will produce the following formula, F=W/Δx.<br>
 The program, however, is not limited to simple operations. It can transform equations that consist of multiplications, additions and parentheses.<br>
 To better explain the concept we will make use of the following complex equation, through which we can demonstrate the procedure more sufficiently. The equation selected is the following: “z=a*(b*(x+y)+c*(d+e))”. In order to solve for a specific variable, the program follows the following steps.<br>
 First it calculates the depth of each variable inside a parenthesis by counting the difference between the number of left and right parentheses in each position.<br>
-
-
+![picture](parcrop.png)
 
 
 Afterwards, it splits the equations in the following order: First at the operators with the smallest depth, and among the operators of the same depth depending on their priority i.e. in the order “+” or “- “, “*” or “/”, “^”. As a result, it first splits the equation into two parts at the “*” symbol at depth “0” generating two different sub-equations: “a” and “b*(x+y)+c*(d+e)”, removing parentheses where redundant i.e. when the depth of the first and the last parentheses have a difference of 1.
 Once the new equations have been generated, the program re-calculates the depth of each variable in each equation and performs the same procedure each time producing the following binary tree:<br>
+![picture](equationdiagram.png)
 Having broken the equation in parts, the program will then combine them in order to generate the new formula. For example, if we want to solve for x, the program will do the following:<br>
 It will start from the first level and take the path not containing “x”. It will choose a, and store “z/a”. Then it will move to the second level, again following the opposite path of x and thus store “z/a-c*(d+e)” etc. Eventually, the program will have generated a new formula with the requested variable being “x” that it will add to the formula table for present and future use.<br>
 
