@@ -1,6 +1,6 @@
 # Physics Solver: From Cognition to Education
 
-<p align="center"><b> Demetrios Kriezis, Athanasios Taprantzis </b> </p>
+### <p align="center"><b> Demetrios Kriezis, Athanasios Taprantzis </b> </p>
 <p align="center" >Hellenic American Educational Foundation-Athens College </p>
 dimitris.kriezis@outlook.com, thatapras@hotmail.gr
 
