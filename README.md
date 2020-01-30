@@ -38,13 +38,13 @@ Depth First Search Algorithm<br>
 The Depth First Search (DFS) algorithm can find a possible path between two vertices in an unweighted graph. To better understand how this approach works here is the pseudocode simplified:<br>
 DFS (v, end)<br>
 Mark v as visited<br>
-	 for u in set_v:<br>
+&nbsp;&nbsp;&nbsp;&nbsp	 for u in set_v:<br>
 if u not visited:<br>
-	if u equals end:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;	if u equals end:<br>
 return u<br>
 else:<br>
 return: run DFS (u, end)<br>
-	return none<br>
+&nbsp;&nbsp;&nbsp;&nbsp;	return none<br>
 
 Notes:<br>
 set_v: The set with all the adjacent vertices of edge v<br>
@@ -85,39 +85,38 @@ Let’s provide an example to better understand this concept: <br>
 
 Text: “The starting velocity” <br>
 First Run      &emsp;    Chunk 1: The starting velocity <br>
-Second Run  <emsp>    Chunk 1: The starting     <emsp>           Chunk 2: starting velocity <br>
-Third Run     <emsp>     Chunk 1: The          <emsp>                   Chunk 2: starting              <emsp>         Chunk 3: velocity <br>
+Second Run  &emsp;    Chunk 1: The starting     &emsp;           Chunk 2: starting velocity <br>
+Third Run     &emsp;     Chunk 1: The          &emsp;                   Chunk 2: starting              &emsp;         Chunk 3: velocity <br>
 
 The matcher module is responsible for matching the output of the tokenizer module to the dictionary. Thus, it performs a comparison between a given token and every element of the dictionary in order to find a match. The comparison is sped up by using hashes. The dictionary contains possible words or phrases that, when present in the text, they may indicate useful information (e.g. starting velocity). <br>
 
 
 ### The memory module 
-When the solver module finds a solution, the program stores the solution and the path followed. More specifically, the program will store the keywords and the variables specified in the problem statement along with the solution path. If a similar problem is met in the future, our program will prefer to use the stored path instead of re-executing the depth first search. In a way, this module mimics the students’ capacity to learn a problem-solving method and then use it for a similar problem.  
+When the solver module finds a solution, the program stores the solution and the path followed. More specifically, the program will store the keywords and the variables specified in the problem statement along with the solution path. If a similar problem is met in the future, our program will prefer to use the stored path instead of re-executing the depth first search. In a way, this module mimics the students’ capacity to learn a problem-solving method and then use it for a similar problem. <br>
 
 ### The clarifier module 
-If the solver module does not find a solution it means that it has exhausted all possible paths and has not reached a value to the user’s request. Then the clarifier module recalls from the memory module all the necessary paths that the solver has created. The clarifier asks the user for clarifications by giving as a feedback the missing variables or keywords, starting from the path that had the lowest number of undefined entities. 
+If the solver module does not find a solution it means that it has exhausted all possible paths and has not reached a value to the user’s request. Then the clarifier module recalls from the memory module all the necessary paths that the solver has created. The clarifier asks the user for clarifications by giving as a feedback the missing variables or keywords, starting from the path that had the lowest number of undefined entities. <br>
 
 ### Conclusion 
-On the whole, through this project we achieved both goals we set out to achieve. First, we created a program that can “learn” from the problems it encounters. When the program is faced with a problem it has already solved, it will recognize repetitive patterns and speed up the computation by recalling the already-computed paths from the memory. Second, the program has become a valuable learning companion for high school students, as it provides the solution and the steps followed in the process of solving a problem. We acknowledge that the program can be further improved to include more advanced concepts of physics that require a higher level of algebraic reasoning and to perform a better text analysis and tokenization in order to deal with more complex written statements. We are actively engaged in enriching the program with everything that can increase its efficiency and accuracy.
+On the whole, through this project we achieved both goals we set out to achieve. First, we created a program that can “learn” from the problems it encounters. When the program is faced with a problem it has already solved, it will recognize repetitive patterns and speed up the computation by recalling the already-computed paths from the memory. Second, the program has become a valuable learning companion for high school students, as it provides the solution and the steps followed in the process of solving a problem. We acknowledge that the program can be further improved to include more advanced concepts of physics that require a higher level of algebraic reasoning and to perform a better text analysis and tokenization in order to deal with more complex written statements. We are actively engaged in enriching the program with everything that can increase its efficiency and accuracy.<br>
 
 ### Bibliography 
 
-AI in Education. (2019). Retrieved from https://www.ted.com/talks/ai_in_education
-
-Cormen, T.H., Leiserson, C.E., Rivest, R.L., Stein, C.(2009). Introduction to Algorithms. Cambridge Massachusetts: The MIT Press.
-
-
-Frankish, K., & Ramsey, W. M. (2018). The Cambridge handbook of artificial intelligence. Cambridge: Cambridge University Press.
-
-Freeman, A., Adams Becker, S. & Cummins, M. (2017). NMC/CoSN Horizon Report: 2017 K-12 Edition. Austin, Texas: The New Media Consortium. Retrieved January 20, 2020 from https://www.learntechlib.org/p/182003/.
-
-Jurafsky, D., & Martin, J. H. (2014). Speech and language processing: an introduction to natural language processing, computational linguistics, and speech recognition. India: Dorling Kindersley Pvt, Ltd.
-
-Kleinberg, J., & Tardos, E. (2006). Algorithm design. Boston: Pearson/Addison-Wesley.
-
-Russell, Stuart J. (Stuart Jonathan). (2010). Artificial intelligence : a modern approach. Upper Saddle River, N.J. :Prentice Hall.
-
-Schuck S., Aubusson P., Burden K., Brindley S. (2018) Current Trends in Technology-Enhanced Learning. In: Uncertainty in Teacher Education Futures. Springer, Singapore.
+AI in Education. (2019). Retrieved from https://www.ted.com/talks/ai_in_education<br>
+<br>
+Cormen, T.H., Leiserson, C.E., Rivest, R.L., Stein, C.(2009). Introduction to Algorithms. Cambridge Massachusetts: The MIT Press.<br>
+<br>
+Frankish, K., & Ramsey, W. M. (2018). The Cambridge handbook of artificial intelligence. Cambridge: Cambridge University Press.<br>
+<br>
+Freeman, A., Adams Becker, S. & Cummins, M. (2017). NMC/CoSN Horizon Report: 2017 K-12 Edition. Austin, Texas: The New Media Consortium. Retrieved January 20, 2020 from https://www.learntechlib.org/p/182003/.<br>
+<br>
+Jurafsky, D., & Martin, J. H. (2014). Speech and language processing: an introduction to natural language processing, computational linguistics, and speech recognition. India: Dorling Kindersley Pvt, Ltd.<br>
+<br>
+Kleinberg, J., & Tardos, E. (2006). Algorithm design. Boston: Pearson/Addison-Wesley.<br>
+<br>
+Russell, Stuart J. (Stuart Jonathan). (2010). Artificial intelligence : a modern approach. Upper Saddle River, N.J. :Prentice Hall.<br>
+<br>
+Schuck S., Aubusson P., Burden K., Brindley S. (2018) Current Trends in Technology-Enhanced Learning. In: Uncertainty in Teacher Education Futures. Springer, Singapore.<br>
 
 
  
