@@ -1,13 +1,10 @@
-# physicssolver
-
-
 # Physics Solver: From Cognition to Education
 
-# Demetrios Kriezis, Athanasios Taprantzis
+### Demetrios Kriezis, Athanasios Taprantzis
 Hellenic American Educational Foundation-Athens College
 dimitris.kriezis@outlook.com, thatapras@hotmail.gr
 
-# Andreas Karampelas
+### Andreas Karampelas
 Information and Communication Technology Teacher, Hellenic American Educational Foundation
 akar@haef.gr
 
