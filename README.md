@@ -38,7 +38,7 @@ Depth First Search Algorithm<br>
 The Depth First Search (DFS) algorithm can find a possible path between two vertices in an unweighted graph. To better understand how this approach works here is the pseudocode simplified:<br>
 DFS (v, end)<br>
 Mark v as visited<br>
-	for u in set_v:<br>
+	<nbsp> for u in set_v: </nbsp><br>
 if u not visited:<br>
 	if u equals end:<br>
 return u<br>
