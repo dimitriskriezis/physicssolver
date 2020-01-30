@@ -54,7 +54,7 @@ end: The target vertex we wish to reach<br>
 
 ### Overview
 The following schema gives a visual overview of the main modules of the project and their relationships. 
- 
+ ![picture](schema.png)
 Our system receives as an input the formulation of the problem in the three possible formats textual, image or voice. All three result to the textual representation using APIs for voice recognition and optical character recognition. The textual representation is processed by the module called “Tokenizer” which separates the text to a set of tokens. These tokens are processed to produce a vector of properties that represent the data of the problem and can serve as the representative vector of the specific problem. The vector contains variables, their values and keywords. This vector is further processed by the “Matcher” module which contains a mapping between keywords and entities that belong to a specific dictionary developed to handle the variation in expressing the same entities, for example, “velocity” and “speed”. The output of the Matcher is a vector of properties each one corresponding to a specific node of a directed graph representation. The core module of our system the “Solver” receives the output and performs a depth first search to find a solution to the user’s request. It is worth mentioning that the solver performs an uninformed search using user’s request as a starting node without taking into account the given data. <br> 
 As stated before, we use three distinct ways for the user to interact with the system. The first is the textual interface where the user gives the input data using text, but also the input data can be in the form of speech or image. 
 
