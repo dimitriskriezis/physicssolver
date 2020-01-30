@@ -84,7 +84,7 @@ The tokenizer module attempts to extract the useful information from the problem
 Let’s provide an example to better understand this concept: <br>
 
 Text: “The starting velocity” <br>
-First Run      <emsp>     Chunk 1: The starting velocity <br>
+First Run      &emsp;    Chunk 1: The starting velocity <br>
 Second Run  <emsp>    Chunk 1: The starting     <emsp>           Chunk 2: starting velocity <br>
 Third Run     <emsp>     Chunk 1: The          <emsp>                   Chunk 2: starting              <emsp>         Chunk 3: velocity <br>
 
